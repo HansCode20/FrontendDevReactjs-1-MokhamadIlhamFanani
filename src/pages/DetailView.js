@@ -6,21 +6,17 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 const DetailView = () => {
     const { id } = useParams();
     const [restaurant, setRestaurant] = useState(null);
-    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchRestaurant = async () => {
-            setLoading(true);
             try {
                 setTimeout(async() => {     
                     const data = await getRestaurants();
                     const restaurant = data.find((item) => item.id === parseInt(id));
                     setRestaurant(restaurant);
-                    setLoading(false);
                 }, 1000);
             } catch (error) {
                 console.log(error);
-                setLoading(false);
             }
         };
         fetchRestaurant();

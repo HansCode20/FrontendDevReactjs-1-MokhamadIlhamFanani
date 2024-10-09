@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import {  Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Home from "./pages/MainPage";
 import DetailView from "./pages/DetailView";
 import Login from "./pages/Login";
